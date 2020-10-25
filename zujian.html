@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <my-cpm></my-cpm>
+		<my-cpm></my-cpm>
+		<my-cpm></my-cpm>
+		<my-cpm></my-cpm>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+		const cpmH = Vue.extend({
+			template:`<div>我是神</div>`
+		})
+		
+		Vue.component('my-cpm', cpmH)
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '你好',
+                sex: '男'
+            }
+        })
+    </script>
+
+</body>
+
+</html>
